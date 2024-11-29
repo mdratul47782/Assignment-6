@@ -4,12 +4,12 @@ function Header() {
   return (
     <header class="container mx-auto px-4 py-4 shadow-lg fixed top-0 bg-white z-50">
     <nav class="flex justify-between items-center">
-      <a href="/index.html" class="text-3xl font-bold">
+      <a href="/" class="text-3xl font-bold">
         <img src="/lws-kitchen.png" class="h-10" />
       </a>
       <ul class="hidden md:flex space-x-6">
-        <li><a href="./index.html" class="hover:text-orange-500">Home</a></li>
-        <li><a href="./category.html" class="hover:text-orange-500">Categories</a></li>
+        <li><a href="/" class="hover:text-orange-500">Home</a></li>
+        <li><a href="/categorys" class="hover:text-orange-500" >Categories</a></li>
         <li><a href="./recipes.html" class="hover:text-orange-500">Latest Recipes</a></li>
       </ul>
       <div class="flex items-center space-x-4">

@@ -1,14 +1,15 @@
+'use client'
 import React from 'react';
 import recipes from '../app/data/recipes.json';
 import categories from '../app/data/categories.json'; // Import categories data
-
+import Link from 'next/link';
 function Recipes({ categoryId }) {
   // Filter recipes based on the selected categoryId
   const filteredRecipes = recipes.filter((recipe) => recipe.category_id === categoryId);
 
   // Find the category name using the categoryId
   const category = categories.find((cat) => cat.id === categoryId);
-
+ 
   return (
     <main className="container mx-auto px-4 py-8 mt-[100px]">
       <div className="flex justify-between items-center mb-8">
@@ -28,9 +29,10 @@ function Recipes({ categoryId }) {
       {filteredRecipes.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {filteredRecipes.map((recipe) => (
-            <div
+            <Link
               key={recipe.title}
               className="bg-white rounded-lg overflow-hidden shadow-md"
+              href={`/authorDetails/${recipe.title}`}
             >
               <img
                 src={`/thumbs/${recipe.thumbnail}`} // Dynamically use the thumbnail
@@ -40,7 +42,7 @@ function Recipes({ categoryId }) {
               <div className="p-4">
                 <h2 className="font-semibold text-lg mb-2">{recipe.title}</h2>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       ) : (
