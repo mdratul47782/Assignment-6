@@ -17,7 +17,8 @@ function PopularCategories() {
       </div>
       <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
         {topCategories.map((category) => (
-          <div key={category.id} className="cursor-pointer text-center group">
+          <Link key={category.id} className="cursor-pointer text-center group"
+          href={`/recipes/${category.id}`}>
             <div className="overflow-hidden rounded-full mb-2 w-20 h-20 mx-auto relative">
               <Image
                 src={category.image}
@@ -28,7 +29,7 @@ function PopularCategories() {
               />
             </div>
             <p className="transition-transform duration-300 group-hover:scale-105">{category.name}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

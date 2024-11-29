@@ -1,15 +1,16 @@
-'use client'
+'use client';
 import React from 'react';
 import recipes from '../app/data/recipes.json';
 import categories from '../app/data/categories.json'; // Import categories data
 import Link from 'next/link';
+
 function Recipes({ categoryId }) {
   // Filter recipes based on the selected categoryId
   const filteredRecipes = recipes.filter((recipe) => recipe.category_id === categoryId);
 
   // Find the category name using the categoryId
   const category = categories.find((cat) => cat.id === categoryId);
- 
+
   return (
     <main className="container mx-auto px-4 py-8 mt-[100px]">
       <div className="flex justify-between items-center mb-8">
@@ -32,7 +33,10 @@ function Recipes({ categoryId }) {
             <Link
               key={recipe.title}
               className="bg-white rounded-lg overflow-hidden shadow-md"
-              href={`/authorDetails/${recipe.title}`}
+              href={{
+                pathname: `/authorDetails/${recipe.title}`,
+                query: { category: categoryId }, // Pass categoryId as a query parameter
+              }}
             >
               <img
                 src={`/thumbs/${recipe.thumbnail}`} // Dynamically use the thumbnail
