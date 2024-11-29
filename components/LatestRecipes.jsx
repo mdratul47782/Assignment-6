@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"; // Use Link for navigation
 import recipes from "../app/data/recipes.json";
 
 function LatestRecipes() {
@@ -14,18 +15,26 @@ function LatestRecipes() {
       <div className="grid md:grid-cols-4 gap-8">
         {latestRecipes.map((recipe, index) => (
           <div key={index}>
-            <div className="w-full h-[300px] relative mb-4">
-              <Image
-                // src={recipe.thumbnail}
-                src={`/thumbs/${recipe.thumbnail}`}
-                fill
-                className="object-cover rounded-lg"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-              />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{recipe.title}</h3>
-            <p className="text-gray-600">{recipe.cooking_time}</p>
-            <p className="text-gray-600">By {recipe.author}</p>
+            <Link
+              href={{
+                pathname: `/authorDetails/${encodeURIComponent(recipe.title)}`, // Use encodeURIComponent for safe URLs
+                query: { category: recipe.category_id }, // Pass category_id as a query parameter
+              }}
+              className="block"
+            >
+              <div className="w-full h-[300px] relative mb-4">
+                <Image
+                  src={`/thumbs/${recipe.thumbnail}`} // Thumbnail path
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  alt={recipe.title} // Add an alt attribute for accessibility
+                />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{recipe.title}</h3>
+              <p className="text-gray-600">{recipe.cooking_time}</p>
+              <p className="text-gray-600">By {recipe.author}</p>
+            </Link>
           </div>
         ))}
       </div>

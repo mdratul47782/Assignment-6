@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image';
 function Footer() {
   return (
     <footer class="bg-gray-100 py-8">
