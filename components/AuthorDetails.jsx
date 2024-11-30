@@ -11,19 +11,15 @@ function AuthorDetails({ recipeTitle }) {
 
   useEffect(() => {
     if (searchParams) {
-      // Decode the recipeTitle
       const decodedTitle = decodeURIComponent(recipeTitle);
-
-      // Find the current recipe
       const currentRecipe = recipes.find((r) => r.title === decodedTitle);
       setRecipe(currentRecipe);
 
       const currentCategoryId = searchParams.get('category');
       if (currentCategoryId) {
-        // Filter recipes by category_id, excluding the current recipe
         const filteredRecipes = recipes
           .filter((r) => r.category_id === currentCategoryId && r.title !== decodedTitle)
-          .slice(0, 4); // Limit to 4 recipes
+          .slice(0, 4);
         setSimilarRecipes(filteredRecipes);
       }
     }
@@ -56,16 +52,77 @@ function AuthorDetails({ recipeTitle }) {
             <span className="text-gray-400">|</span>
             <span className="text-gray-600">{recipe.published_date}</span>
           </div>
-          <Image
-            src={`/thumbs/${recipe.thumbnail}`}
-            alt={recipe.title}
-            width={800}
-            height={600}
-            className="w-full h-auto mb-8 rounded-lg"
-            priority
-          />
+          <div class="flex justify-between items-center mb-8">
+        <div class="flex space-x-4">
+          <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path
+                d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+            </svg>
+            Share
+          </button>
+          <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+            </svg>
+            Save
+          </button>
+        </div>
+      </div>
+      <Image
+  src={`/thumbs/${recipe.thumbnail}`}
+  alt={recipe.title}
+  width={800} // Base width for the image
+  height={0} // Automatically adjusts height to maintain aspect ratio
+  className="w-full h-auto mb-8 rounded-lg"
+  priority
+/>
+
+
           <p className="text-gray-600 mb-8">
             {recipe.description || 'This recipe does not have a detailed description available.'}
+          </p>
+
+          {/* Static Content */}
+          <h2 className="text-3xl font-bold mb-4">Before you begin</h2>
+          <p className="mb-8">
+            Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low
+            heat plenty of time adobo fat raw soften fruit. Sweet renders bone-in marrow richness kitchen, fricassee
+            basted putter.
+          </p>
+
+          <h2 className="text-3xl font-bold mb-4">Here are the basics</h2>
+          <p className="mb-8">
+            Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket. Polenta mustard hunk
+            greens. Wine technique snack skewers chuck excess. Oil heat slowly. Slices natural delicious, set aside magic
+            tbsp skillet, bay leaves brown centerpiece. Fruit soften edges frond slices onion snack pork steem on wines
+            excess technique cup; Cover smoker soy sauce.
+          </p>
+
+          <blockquote className="text-3xl font-bold italic text-center my-12 px-4">
+            "One cannot think well, love well, sleep well, if one has not dined well."
+          </blockquote>
+          <p className="text-center text-gray-600 mb-12">— Virginia Woolf, A Room of One's Own</p>
+
+          <h2 className="text-3xl font-bold mb-4">In the kitchen</h2>
+          <p className="mb-8">
+            Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic undisturbed raw platter
+            will meld.
+          </p>
+
+          <Image
+            src="/thumbs/thumb-15.jpg"
+            alt="Cooking in kitchen"
+            width={800}
+            height={600}
+            className="w-full h-auto mb-8 rounded-lg max-w-xl mx-auto"
+            priority
+          />
+
+          <p className="mb-8">
+            Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket.
           </p>
         </article>
 

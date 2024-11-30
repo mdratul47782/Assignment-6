@@ -1,3 +1,4 @@
+
 import Deliciousness from "@/components/Deliciousness";
 import HandPickedCollections from "@/components/HandPickedCollections";
 import Header from "@/components/Header";
@@ -9,7 +10,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <div >
       
       <main class="container mx-auto px-4 mt-[100px]">
         <HeroSection />

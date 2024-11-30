@@ -10,7 +10,7 @@
     "published_date": "2024-09-01",
     "cooking_time": "35 minutes",
     "author": "Mia Cooper",
-    "thumbnail": "thumb-6.jpg"
+    "thumbnail": "thumb-8.jpg"
   },
   {
     "rating": {
@@ -110,11 +110,11 @@
     },
     "category_id": "i5j6k7l8-m9n0-o1p2-q3r4-s5t6u7v8w9x0",
     "description": "Ramen has become a global favorite, and it's not hard to see why. This blog features a collection of ramen recipes, from traditional Japanese styles to more modern fusion versions. Whether you're making a simple miso ramen or a rich tonkotsu broth, these recipes are sure to satisfy your cravings. Learn the techniques for making homemade ramen noodles, broth, and all the toppings to create a bowl that's as good as any ramen shop.",
-    "title": "abc",
+    "title": "Chicken Food",
     "published_date": "2024-09-10",
     "cooking_time": "45 minutes",
-    "author": "Zoe Foster",
-    "thumbnail": "thumb-6.jpg"
+    "author": "Arafatullah Al muaz",
+    "thumbnail": "thumb-3.jpg"
   },
   {
     "rating": {
@@ -123,7 +123,7 @@
     },
     "category_id": "i5j6k7l8-m9n0-o1p2-q3r4-s5t6u7v8w9x0",
     "description": "Ramen has become a global favorite, and it's not hard to see why. This blog features a collection of ramen recipes, from traditional Japanese styles to more modern fusion versions. Whether you're making a simple miso ramen or a rich tonkotsu broth, these recipes are sure to satisfy your cravings. Learn the techniques for making homemade ramen noodles, broth, and all the toppings to create a bowl that's as good as any ramen shop.",
-    "title": "def",
+    "title": "Pakistani Testy Food",
     "published_date": "2024-09-10",
     "cooking_time": "45 minutes",
     "author": "Ratul",
@@ -154,6 +154,19 @@
     "cooking_time": "30 minutes",
     "author": "Ryan Brooks",
     "thumbnail": "thumb-7.jpg"
+  },
+  {
+    "rating": {
+      "rating_count": 26,
+      "average_rating": 4.2
+    },
+    "category_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "description": "Seafood lovers, this one's for you! From shrimp tacos to crab cakes and beyond",
+    "title": "Easy and Flavorful Seafood Recipes",
+    "published_date": "2024-05-14",
+    "cooking_time": "30 minutes",
+    "author": "Md.ratul",
+    "thumbnail": "thumb-6.jpg"
   },
   {
     "rating": {
