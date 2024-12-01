@@ -1,5 +1,6 @@
 import React from 'react';
-import recipes from '../app/data/recipes.json'; // Adjust the path if necessary
+import recipes from '../app/data/recipes.json'; 
+import Image from 'next/image';
 
 function SuperDelicious() {
   // Safely filter and sort recipes with a valid average_rating
@@ -14,11 +15,16 @@ function SuperDelicious() {
       <div className="grid md:grid-cols-3 gap-8">
         {topRecipes.map((recipe, index) => (
           <div key={index}>
-            <img
-              src={`/thumbs/${recipe.thumbnail}`}
-              alt={recipe.title}
-              className="w-full h-[300px] object-cover rounded-lg mb-4"
-            />
+            <div className="w-full h-[300px] rounded-lg overflow-hidden mb-4">
+  <Image
+    src={`/thumbs/${recipe.thumbnail}`} // Dynamically use the thumbnail
+    alt={recipe.title}
+    width={800} // Set width proportionally to the height
+    height={300} // Matches h-[300px] from the Tailwind class
+    className="object-cover"
+    priority // Preload the image for better performance
+  />
+</div>
             <h3 className="text-xl font-semibold mb-2">{recipe.title}</h3>
             <div className="flex items-center text-yellow-500 mb-2">
               {/* Render stars based on average_rating */}

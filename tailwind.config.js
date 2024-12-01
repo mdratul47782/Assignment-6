@@ -14,6 +14,8 @@ module.exports = {
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
         inter: ['"Inter"', 'sans-serif'],
+        geistSans: ['var(--font-geist-sans)', 'sans-serif'],
+        geistMono: ['var(--font-geist-mono)', 'monospace'],
       },
     },
   },

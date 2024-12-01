@@ -1,8 +1,10 @@
-'use client';
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import recipes from "../app/data/recipes.json";
 import categories from "../app/data/categories.json";
+
+import Image from "next/image";
 
 function HeroSection() {
   const [currentRecipeIndex, setCurrentRecipeIndex] = useState(0);
@@ -27,11 +29,14 @@ function HeroSection() {
   return (
     <section className="mb-16 bg-orange-50">
       <div className="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <img
+        <div className="w-full h-[450px] rounded-lg overflow-hidden">
+          <Image
             src={`/thumbs/${currentRecipe.thumbnail}`}
             alt={currentRecipe.title}
-            className="w-full h-[450px] object-cover rounded-lg"
+            width={800}
+            height={450}
+            className="object-cover"
+            priority
           />
         </div>
         <div>

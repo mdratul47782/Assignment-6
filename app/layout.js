@@ -3,17 +3,20 @@ import Header from "@/components/Header";
 import localFont from "next/font/local";
 import "./globals.css";
 
+// Local fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
 
+// Metadata for SEO
 export const metadata = {
   title: "LWS Kitchen",
   description: "Best Food's For You",
@@ -22,18 +25,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        class="bg-white"
+        className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground`}
       >
         <Header />
-        {children}
+        <main
+          style={{
+            fontFamily: "'Playfair Display', serif, 'Inter', sans-serif", // Apply custom fonts only to the main content
+          }}
+        >
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

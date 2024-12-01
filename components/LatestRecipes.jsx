@@ -17,18 +17,18 @@ function LatestRecipes() {
           <div key={index}>
             <Link
               href={{
-                pathname: `/authorDetails/${encodeURIComponent(recipe.title)}`, // Use encodeURIComponent for safe URLs
-                query: { category: recipe.category_id }, // Pass category_id as a query parameter
+                pathname: `/authorDetails/${encodeURIComponent(recipe.title)}`, 
+                query: { category: recipe.category_id },
               }}
               className="block"
             >
               <div className="w-full h-[300px] relative mb-4">
                 <Image
-                  src={`/thumbs/${recipe.thumbnail}`} // Thumbnail path
+                  src={`/thumbs/${recipe.thumbnail}`}
                   fill
                   className="object-cover rounded-lg"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  alt={recipe.title} // Add an alt attribute for accessibility
+                  alt={recipe.title} 
                 />
               </div>
               <h3 className="text-lg font-semibold mb-2">{recipe.title}</h3>

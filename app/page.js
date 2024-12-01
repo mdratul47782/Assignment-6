@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div >
       
-      <main class="container mx-auto px-4 mt-[100px]">
+      <main className="container mx-auto px-4 mt-[100px]">
         <HeroSection />
         <SuperDelicious />
         <PopularCategories />

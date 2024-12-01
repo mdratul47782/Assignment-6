@@ -1,12 +1,14 @@
-'use client';
-import React from 'react';
-import recipes from '../app/data/recipes.json';
-import categories from '../app/data/categories.json'; // Import categories data
-import Link from 'next/link';
-
+"use client";
+import React from "react";
+import recipes from "../app/data/recipes.json";
+import categories from "../app/data/categories.json"; // Import categories data
+import Link from "next/link";
+import Image from "next/image";
 function Recipes({ categoryId }) {
   // Filter recipes based on the selected categoryId
-  const filteredRecipes = recipes.filter((recipe) => recipe.category_id === categoryId);
+  const filteredRecipes = recipes.filter(
+    (recipe) => recipe.category_id === categoryId
+  );
 
   // Find the category name using the categoryId
   const category = categories.find((cat) => cat.id === categoryId);
@@ -16,7 +18,7 @@ function Recipes({ categoryId }) {
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-4xl font-bold mb-2">
-            {category ? category.name : 'Unknown Category'}{' '}
+            {category ? category.name : "Unknown Category"}{" "}
             <span className="text-gray-500 text-2xl font-normal">
               ({recipes.length} Recipes)
             </span>
@@ -38,11 +40,16 @@ function Recipes({ categoryId }) {
                 query: { category: categoryId }, // Pass categoryId as a query parameter
               }}
             >
-              <img
-                src={`/thumbs/${recipe.thumbnail}`} // Dynamically use the thumbnail
-                alt={recipe.title}
-                className="w-full h-48 object-cover"
-              />
+              <div className="w-full h-48 rounded-lg overflow-hidden">
+                <Image
+                  src={`/thumbs/${recipe.thumbnail}`} 
+                  alt={recipe.title}
+                  width={400} 
+                  height={192} 
+                  className="object-cover"
+                  priority 
+                />
+              </div>
               <div className="p-4">
                 <h2 className="font-semibold text-lg mb-2">{recipe.title}</h2>
               </div>
