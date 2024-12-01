@@ -1,40 +1,117 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
+---
 
-src={`/thumbs/${bestRecipe.thumbnail}`}
+# **Food Website - LWS Kitchen**
+
+A beautifully designed and user-friendly food blog website where users can explore recipes, cooking tips, and much more. This project showcases a dynamic interface with modern web development practices.
+
+---
+
+## **Features**
+
+- 📝 **Recipe Blog**: View detailed recipes with descriptions, cooking times, and images.  
+- 🎨 **Responsive Design**: Fully optimized for desktop, tablet, and mobile views.  
+- 🔎 **Dynamic Content**: Recipes are dynamically rendered based on the category or search input.  
+- 📷 **Image Optimization**: High-quality, optimized images for fast loading.  
+  
+- ✨ **Recommendations**: Display similar recipes for a better user experience.  
+
+---
+
+## **Technologies Used**
+
+- **Frontend**:  
+  - [Next.js](https://nextjs.org/) for server-side rendering and routing.  
+  - React.js for building reusable UI components.  
+  - Tailwind CSS for modern and responsive styling.  
+
+- **Backend/Data**:  
+  - JSON files for recipe data simulation.  
+  - Dynamic fetching for filtering and displaying related recipes.  
+
+- **Assets & Fonts**:  
+  - Google Fonts (`Playfair Display` and `Inter`) for typography.  
+  - Locally hosted fonts for improved performance.  
+
+---
+
+## **Setup and Installation**
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/mdratul47782/Assignment-6
+   cd Assignment-6
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the website in the browser.
+
+4. **Build for Production**:
+   ```bash
+   npm run build
+   ```
+
+5. **Start the Production Server**:
+   ```bash
+   npm start
+   ```
+
+---
+
+
+
+## **Deployment**
+
+The project is deployed using **Vercel**. Check out the live demo: [LWS Kitchen Live](https://your-deployment-link.vercel.app/).
+
+---
+
+## **Screenshots**
+
+### **Homepage**
+![Homepage](./screenshots/homepage.png)
+
+### **Recipe Page**
+![Recipe Page](./screenshots/recipe-page.png)
+
+---
+
+## **Future Enhancements**
+
+- Add user authentication for saving favorite recipes.  
+- Integrate a backend with a database for storing user data and recipes.  
+- Implement a search bar with advanced filters.  
+- Add more animations and transitions for a modern look.  
+
+---
+
+## **License**
+
+This project is licensed under the MIT License. Feel free to use and modify it for your own purposes.
+
+---
+
+## **Acknowledgments**
+
+- [Next.js Documentation](https://nextjs.org/docs) for comprehensive guides.  
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) for styling inspiration.  
+- [Google Fonts](https://fonts.google.com/) for typography.  
+
+---
+
+## **Contact**
+
+For questions or suggestions, please reach out to:  
+**Email**: mdratul47782@gmail.com  
+**GitHub**: [ratul_aka_muaz](https://github.com/mdratul47782)
+
+---
