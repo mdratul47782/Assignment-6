@@ -20,7 +20,7 @@ function Recipes({ categoryId }) {
           <h1 className="text-4xl font-bold mb-2">
             {category ? category.name : "Unknown Category"}{" "}
             <span className="text-gray-500 text-2xl font-normal">
-              ({recipes.length} Recipes)
+              ({filteredRecipes.length} Recipes)
             </span>
           </h1>
           <p className="text-gray-600">
