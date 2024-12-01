@@ -79,15 +79,15 @@ The project is deployed using **Vercel**. Check out the live demo: [LWS Kitchen 
 
 ### **Homepage**
 ![NavBar](/public/Screenshot_208_Nav.png)
-![Home Page](/public/Screenshot_207_Nav.png)
+![Home Page](/public/Screenshot_207_Home.png)
 
 
 
 ### **Recipe Page**
-![Recipe Page](/public/Screenshot_209_Nav.png)
+![Recipe Page](/public/Screenshot_209_Recipe.png)
 
 ### **Blog Details Page**
-![Blog Details Page](/public/Screenshot_210_Nav.png)
+![Blog Details Page](/public/Screenshot_210_BlogDetails.png)
 
 ---
 
