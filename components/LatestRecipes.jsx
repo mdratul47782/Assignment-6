@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link"; // Use Link for navigation
+import Link from "next/link"; 
 import recipes from "../app/data/recipes.json";
 
 function LatestRecipes() {
-  // Sort recipes by published_date in descending order and pick the top 4
+  
   const latestRecipes = [...recipes]
     .sort((a, b) => new Date(b.published_date) - new Date(a.published_date))
     .slice(0, 4);

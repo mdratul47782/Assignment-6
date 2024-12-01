@@ -86,25 +86,27 @@ function AuthorDetails({ recipeTitle }) {
           </p>
 
           {/* Static Content */}
-          <h2 className="text-3xl font-bold mb-4">Before you begin</h2>
-          <p className="mb-8">
-            Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low
-            heat plenty of time adobo fat raw soften fruit. Sweet renders bone-in marrow richness kitchen, fricassee
-            basted putter.
-          </p>
+          <h2 class="text-3xl font-bold mb-4">Before you begin</h2>
+<p class="mb-8">
+  Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low
+  heat plenty of time adobo fat raw soften fruit. Sweet renders bone-in marrow richness kitchen, fricassee
+  basted putter.
+</p>
 
-          <h2 className="text-3xl font-bold mb-4">Here are the basics</h2>
-          <p className="mb-8">
-            Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket. Polenta mustard hunk
-            greens. Wine technique snack skewers chuck excess. Oil heat slowly. Slices natural delicious, set aside magic
-            tbsp skillet, bay leaves brown centerpiece. Fruit soften edges frond slices onion snack pork steem on wines
-            excess technique cup; Cover smoker soy sauce.
-          </p>
+<h2 class="text-3xl font-bold mb-4">Here are the basics</h2>
+<p class="mb-8">
+  Juicy meatballs brisket slammin&#39; baked shoulder. Juicy smoker soy sauce burgers brisket. Polenta mustard hunk
+  greens. Wine technique snack skewers chuck excess. Oil heat slowly. Slices natural delicious, set aside magic
+  tbsp skillet, bay leaves brown centerpiece. Fruit soften edges frond slices onion snack pork steem on wines
+  excess technique cup; Cover smoker soy sauce.
+</p>
 
-          <blockquote className="text-3xl font-bold italic text-center my-12 px-4">
-            "One cannot think well, love well, sleep well, if one has not dined well."
-          </blockquote>
-          <p className="text-center text-gray-600 mb-12">— Virginia Woolf, A Room of One's Own</p>
+<blockquote class="text-3xl font-bold italic text-center my-12 px-4">
+  &quot;One cannot think well, love well, sleep well, if one has not dined well.&quot;
+</blockquote>
+
+<p class="text-center text-gray-600 mb-12">— Virginia Woolf, A Room of One&#39;s Own</p>
+
 
           <h2 className="text-3xl font-bold mb-4">In the kitchen</h2>
           <p className="mb-8">
@@ -122,7 +124,7 @@ function AuthorDetails({ recipeTitle }) {
           />
 
           <p className="mb-8">
-            Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket.
+            Juicy meatballs brisket slammin baked shoulder. Juicy smoker soy sauce burgers brisket.
           </p>
         </article>
 

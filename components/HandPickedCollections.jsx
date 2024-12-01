@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import recipes from '../app/data/recipes.json'; // Assuming recipes.json is in this location
+import recipes from '../app/data/recipes.json'; 
 
 function HandPickedCollections() {
-  // Select two random recipes from the recipes data
-  const handPicked = recipes.slice(0, 2); // Adjust to use actual logic for selecting "hand-picked" recipes
+  
+  const handPicked = recipes.slice(0, 2); 
 
   return (
     <section className="mb-16">

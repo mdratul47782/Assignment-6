@@ -1,11 +1,13 @@
-import React from 'react';
-import recipes from '../app/data/recipes.json'; 
-import Image from 'next/image';
+import React from "react";
+import recipes from "../app/data/recipes.json";
+import Image from "next/image";
 
 function SuperDelicious() {
-  // Safely filter and sort recipes with a valid average_rating
+  
   const topRecipes = recipes
-    .filter(recipe => recipe.rating && recipe.rating.average_rating !== undefined)
+    .filter(
+      (recipe) => recipe.rating && recipe.rating.average_rating !== undefined
+    )
     .sort((a, b) => b.rating.average_rating - a.rating.average_rating)
     .slice(0, 3);
 
@@ -16,19 +18,21 @@ function SuperDelicious() {
         {topRecipes.map((recipe, index) => (
           <div key={index}>
             <div className="w-full h-[300px] rounded-lg overflow-hidden mb-4">
-  <Image
-    src={`/thumbs/${recipe.thumbnail}`} // Dynamically use the thumbnail
-    alt={recipe.title}
-    width={800} // Set width proportionally to the height
-    height={300} // Matches h-[300px] from the Tailwind class
-    className="object-cover"
-    priority // Preload the image for better performance
-  />
-</div>
+              <Image
+                src={`/thumbs/${recipe.thumbnail}`}
+                alt={recipe.title}
+                width={800}
+                height={300}
+                className="object-cover"
+                priority
+              />
+            </div>
             <h3 className="text-xl font-semibold mb-2">{recipe.title}</h3>
             <div className="flex items-center text-yellow-500 mb-2">
               {/* Render stars based on average_rating */}
-              {Array.from({ length: Math.round(recipe.rating.average_rating) }).map((_, starIndex) => (
+              {Array.from({
+                length: Math.round(recipe.rating.average_rating),
+              }).map((_, starIndex) => (
                 <svg
                   key={starIndex}
                   xmlns="http://www.w3.org/2000/svg"
